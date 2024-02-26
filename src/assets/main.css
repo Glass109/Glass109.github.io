@@ -1,1 +1,10 @@
 @import "./base.css";
+
+html {
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to right, #ffb3ba, #ffdfba, #ffffba, #baffc9, #bae1ff);
+}
+body {
+    cursor: url("/public/cursor.cur"), auto;
+}
