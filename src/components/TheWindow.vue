@@ -1,42 +1,63 @@
-<script>
-export default {
-  props: {
-    color: {
-      type: String,
-      default: 'bg-teal-100',
-    },
-    emoji: {
-      type: String,
-      default: '??',
-    },
-    title: {
-      type: String,
-      default: 'title',
-    },
-    decorations: {
-      type: Number,
-      default: 3,
-    },
-    delay: {
-      type: Number,
-      default: 0,
-    },
-  }
-}
+<script setup>
+import {ref} from "vue";
+
+const props = defineProps({
+  id: {
+    type: Number,
+    default: 0,
+  },
+  color: {
+    type: String,
+    default: 'bg-teal-100',
+  },
+  emoji: {
+    type: String,
+    default: '??',
+  },
+  title: {
+    type: String,
+    default: 'title',
+  },
+  delay: {
+    type: Number,
+    default: 0,
+  },
+});
+const toggleMinimized = () => {
+  isMinimized.value = !isMinimized.value;
+};
+const alertaNada = () => {
+  alert('Este no hace nada wey nomames jajajajaj');
+};
+const isMinimized = ref(false);
 </script>
 
 <template>
-  <div :class="`neobrutshadow ${color} rounded-xl border-4 border-black transition-all`"
-       :style="{ animation: `float 3s ease-in-out ${delay}ms infinite` }">
-    <div class="p-2 flex items-center border-b-2 gap-2 border-black">
-      <div class="bg-white rounded-md border-2 border-black">{{ emoji }}</div>
+  <div
+      :class="`neobrutshadow ${color} rounded-xl border-4 border-black transition-all ${isMinimized ? 'minimized-card' : ''}`"
+      :style="{ animation: `float 3s ease-in-out ${delay}ms infinite` }">
+    <div class="text-xl p-2 flex items-center border-b-2 gap-2 border-black">
+      <div class=" bg-gray-100 rounded-md border-2 border-black">{{ emoji }}</div>
       <div class="grow text-center font-black">{{ title }}</div>
-      <div v-for="_ in decorations" class="w-5 h-5 border-2 border-black rounded-md bg-white"></div>
+      <!-- Botones de cierre de ventana      -->
+      <div
+          class="size-6 border-2 border-black rounded-md bg-yellow-200 hover:bg-yellow-400 hover:scale-110"
+          @click="toggleMinimized"
+      ></div>
+      <div
+          class="size-6 border-2 border-black rounded-md bg-green-200 hover:bg-green-400 hover:scale-110"
+          @click="alertaNada"
+      ></div>
+      <div
+          class="size-6 border-2 border-black rounded-md bg-red-200 hover:bg-red-400 hover:scale-110"
+          @click="$emit('close', id)"
+      ></div>
     </div>
-    <div class="p-2 font-mono">
-      <!--Aquí va el contenido de la ventana-->
-      <slot/>
-    </div>
+    <Transition name="height-change">
+      <div v-if="!isMinimized" class="p-2 font-mono overflow-clip">
+        <slot/>
+      </div>
+    </Transition>
   </div>
 </template>
 
@@ -53,6 +74,10 @@ export default {
   z-index: 1;
 }
 
+.minimized-card {
+  filter: grayscale(30%) brightness(50%);
+}
+
 h1 {
   font-size: 1.5rem;
   font-weight: bold;
@@ -63,6 +88,22 @@ h1 {
   background: #ffff45;
   display: inline;
 
+}
+
+.height-change-enter-active, .height-change-leave-active {
+  transition: max-height .5s ease-out;
+}
+
+.height-change-enter-from, .height-change-leave-to {
+  max-height: 0;
+}
+
+.height-change-enter-to, .height-change-leave-from {
+  max-height: 300px; /* Set this to a value greater than the actual height of the content */
+}
+
+.height-change-move {
+  transition: all .5s ease;
 }
 
 @keyframes float {

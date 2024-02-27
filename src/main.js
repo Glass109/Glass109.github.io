@@ -4,6 +4,7 @@ import App from './routes/WindowsPortfolio.vue'
 import {createRouter, createWebHistory} from "vue-router";
 import WindowsDesign from "./routes/WindowsPortfolio.vue";
 import StreetLights from "./routes/StreetLights.vue";
+
 const router = createRouter({
     history: createWebHistory(),
     routes: [

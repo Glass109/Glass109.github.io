@@ -11,7 +11,8 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
-    "oh-vue-icons": "^1.0.0-rc3",
+    "@remixicon/vue": "^4.2.0",
+    "remixicon": "^4.2.0",
     "vue": "^3.4.15",
     "vue-auto-routes": "^2.2.0",
     "vue-router": "^4.3.0"
