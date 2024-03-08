@@ -1,6 +1,4 @@
-
-
-const languages = ['Python', 'C#', 'Java', 'JavaScript', 'HTML', 'CSS', 'SQL','<mark>PHP</mark>', 'Dart',]
+const languages = ['Python', 'C#', 'Java', 'JavaScript', 'HTML', 'CSS', 'SQL', '<mark>PHP</mark>', 'Dart',]
 const frameworks = ['.NET', '<mark>Vue.js</mark>', 'FastAPI', 'Flutter', 'Node.js', 'Express', 'Laravel', 'Godot', 'TailwindCSS', 'Bootstrap',]
 const habilidades = ['Trabajo en equipo', 'Comunicación', 'Resolución de problemas', 'Pensamiento crítico', 'Creatividad', 'Adaptabilidad', 'Empatía', 'Gestión del tiempo', 'Liderazgo', 'Toma de decisiones',]
 
@@ -30,7 +28,7 @@ export const windows = [{
         <a class="grow bg-white rounded p-2 hover:scale-105 hover:saturate-200 transition-all" href="mailto: Glas109@gmail.com" >📧 Correo</a>
     </div>
     <div class="flex gap-1 w-full">
-        <a class="grow bg-blue-200 rounded p-2 hover:scale-105 hover:saturate-200 transition-all" href="https://www.facebook.com/glass109/" >🧔🏻 Facebook</a>
+        <a class="grow bg-gray-500 rounded p-2 hover:scale-105 hover:saturate-200 transition-all text-white" href="https://github.com/Glass109" >🐙 Github</a>
         <a class="grow bg-red-200 rounded p-2 hover:scale-105 hover:saturate-200 transition-all" href="https://www.youtube.com/@glass1098" >▶️ Youtube</a>
     </div>
     
@@ -63,10 +61,20 @@ export const windows = [{
     content: `<ul>${habilidades.map(habilidad => `<li>${habilidad}</li>`).join('')}</ul>`, delay: randomDelay()
 }, {
     id: 7,
+    emoji: '🕹️',
+    title: 'Proyectos',
+    color: 'bg-blue-300',
+    content: `
+<a target="_blank"  href="https://youtu.be/OPv49kh5kD4?si=SdjDt7xmpUPt6N_1"><b>2023:</b> Creación de un TwinStick shooter en Godot Engine llamado Ultimate Tank Machine (UTM)</a><a class="text-red-500" target="_blank"  href="https://github.com/Glass109/UltimateTankMachineGODOT"> [Codigo Fuente]</a> <br>
+<b>2024:</b> Desarrollo de una aplicación Web en Laravel para un servicio de RCM<br>
+<b>2024:</b> Fundador del proyecto EduKT que busca incentivar el estudio en casa para niños de primaria y secundaria<br>`,
+    delay: randomDelay()
+}, {
+    id: 8,
     emoji: '🌐',
     title: 'Idiomas',
     color: 'bg-purple-300',
-    content: '<b>Español:</b> Nativo<br><mark><b>Inglés:</b>Fluído<br></mark><b>Babosadas:</b> Experto',
+    content: '<b>Español:</b> Nativo<br><mark><b>Inglés: </b>Nivel C1 (Certificación Oxford TCC)<br></mark>',
     delay: randomDelay()
 }]
 

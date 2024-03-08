@@ -28,6 +28,10 @@ mark {
     background-size: 200% 100%;
     background-position: 100% 0;
 }
+a {
+    color: #023100;
+    text-decoration: underline;
+}
 
 @-webkit-keyframes highlight {
     to {
