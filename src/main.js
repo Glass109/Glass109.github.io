@@ -1,12 +1,12 @@
 import { createApp } from 'vue';
 import './assets/main.css';
 import App from './app.vue';
-import { createRouter, createWebHistory } from 'vue-router';
+import {createRouter, createWebHashHistory} from 'vue-router';
 import WindowsDesign from './routes/WindowsPortfolio.vue';
 import HotlinePortfolio from './routes/HotlinePortfolio.vue';
 
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHashHistory(),
     routes: [
         { path: '/', component: WindowsDesign },
         { path: '/threedee', component: HotlinePortfolio }
