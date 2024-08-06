@@ -12,12 +12,15 @@
   },
   "dependencies": {
     "@remixicon/vue": "^4.2.0",
+    "@tresjs/core": "^4.2.5",
     "remixicon": "^4.2.0",
+    "three": "^0.134.0",
     "vue": "^3.4.15",
     "vue-auto-routes": "^2.2.0",
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
+    "@types/three": "^0.167.1",
     "@vitejs/plugin-vue": "^5.0.3",
     "autoprefixer": "^10.4.17",
     "gh-pages": "^6.1.1",
