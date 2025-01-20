@@ -1,7 +1,7 @@
 export default defineNuxtConfig({
     ssr: true,
     app: {
-        baseURL: '/glass109/', // Set the base path for GitHub Pages
+        baseURL: '/glass109portfolio/', // Set the base path for GitHub Pages
     },
     compatibilityDate: '2024-11-01',
     devtools: { enabled: true },
@@ -17,15 +17,8 @@ export default defineNuxtConfig({
             content: ['./public/dictionaries/*.{js,json,ts}'],
         },
     },
-    nitro: {
-        prerender: {
-            crawlLinks: true,
-            failOnError: false,
-        },
-    },
     generate: {
         nojekyll: true,
         fallback: '404.html',
     },
-    target: 'static',
 });
