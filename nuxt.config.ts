@@ -17,7 +17,10 @@ export default defineNuxtConfig({
             ]
         }
     },
-    nitro: {
-        compressPublicAssets: true,
-    }
+    generate:{
+        nojekyll: true,
+        fallback: '404.html'
+    },
+    target: 'static',
+
 })
