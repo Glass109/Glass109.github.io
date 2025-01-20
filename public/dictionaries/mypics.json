@@ -1,0 +1,17 @@
+[
+  {
+    "src": "myPictures/pic (1).jpg",
+    "title": "Kung Lao & Jill Valentine",
+    "description": "This is the description for picture 1."
+  },
+  {
+    "src": "myPictures/pic (2).jpg",
+    "title": "Picture 2",
+    "description": "This is the description for picture 2."
+  },
+  {
+    "src": "myPictures/pic (3).jpg",
+    "title": "Picture 3",
+    "description": "This is the description for picture 3."
+  }
+]
