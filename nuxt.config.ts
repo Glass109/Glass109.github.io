@@ -17,6 +17,14 @@ export default defineNuxtConfig({
             ]
         }
     },
+    nitro: {
+        baseURL: 'https://glass109.github.io',
+        siteName: 'Glass109',
+        prerender: {
+            crawlLinks: true,
+            failOnError: false,
+        }
+    },
     generate:{
         nojekyll: true,
         fallback: '404.html'
