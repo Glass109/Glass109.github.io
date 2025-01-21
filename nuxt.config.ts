@@ -1,7 +1,7 @@
 export default defineNuxtConfig({
     ssr: true,
     app: {
-        baseURL: '/glass109portfolio/', // Set the base path for GitHub Pages
+        baseURL: '/', // Set the base path for GitHub Pages
     },
     compatibilityDate: '2024-11-01',
     devtools: { enabled: true },
